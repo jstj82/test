@@ -32,7 +32,8 @@ public class Test extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath()).append("<br>IP: ").append(getPublicIp());
+		response.getWriter().append("Served at: ").append(request.getContextPath()).append("\n\nIP: ").append(getPublicIp()).append("\n\nEnvironment Variable: ")
+				.append(System.getenv("ENVIRONMENT"));
 	}
 
 	/**
